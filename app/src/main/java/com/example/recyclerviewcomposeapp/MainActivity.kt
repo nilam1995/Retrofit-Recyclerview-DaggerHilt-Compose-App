@@ -40,7 +40,9 @@ import androidx.compose.ui.unit.sp
 import com.example.recyclerviewcomposeapp.model.EmployDetails
 import com.example.recyclerviewcomposeapp.ui.theme.RecyclerviewComposeAppTheme
 import com.example.recyclerviewcomposeapp.util.Details
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
