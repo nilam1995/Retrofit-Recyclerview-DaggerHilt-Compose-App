@@ -3,6 +3,7 @@ package com.example.recyclerviewcomposeapp.db.daos
 import android.content.Context
 import androidx.room.Room
 import com.example.recyclerviewcomposeapp.db.AppDatabase
+import com.example.recyclerviewcomposeapp.di.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +18,7 @@ object DataBaseModule {
     @Provides
     fun provideDataBase(@ApplicationContext app:Context) = Room.databaseBuilder(app,
         AppDatabase::class.java,
-        "my_db").fallbackToDestructiveMigration().build()
+        Constants.DATABASE_NAME).fallbackToDestructiveMigration().build()
 
     @Singleton
     @Provides
