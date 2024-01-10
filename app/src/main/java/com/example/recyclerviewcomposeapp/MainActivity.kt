@@ -87,35 +87,46 @@ fun EmployeeCard(emp: EmployDetails) {
                 ),
 
     ) {
-        Row(modifier = Modifier.padding(20.dp)){
-            Column(modifier = Modifier.weight(1f),
-                Arrangement.Center){
-                Text(text = emp.title,
-                style = TextStyle(
-                    color = Color.Black,
-                    fontSize = 22.sp,
-                    fontWeight = FontWeight.Bold)
-                )
+//        Row(modifier = Modifier.padding(20.dp)){
+//            Column(modifier = Modifier.weight(1f),
+//                Arrangement.Center){
+//                Text(text = emp.title,
+//                style = TextStyle(
+//                    color = Color.Black,
+//                    fontSize = 22.sp,
+//                    fontWeight = FontWeight.Bold)
+//                )
+//
+//                Text(text = "Age :- "+emp.age.toString(),
+//                    style = TextStyle(
+//                        color = Color.Black,
+//                        fontSize = 15.sp
+//                    )
+//                )
+//
+//                Text(text = "Sex :- " + emp.sex,
+//                    style = TextStyle(
+//                        color = Color.Black,
+//                        fontSize = 15.sp
+//                    ))
+//            }
+//
+//            Image(painter = painterResource(id = emp.ImageId), contentDescription = "Profile Image",
+//                contentScale = ContentScale.FillHeight,
+//                modifier = Modifier
+//                    .padding(8.dp)
+//                    .size(110.dp)
+//                    .clip((CircleShape)))
+//        }
 
-                Text(text = "Age :- "+emp.age.toString(),
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 15.sp
-                    )
-                )
-
-                Text(text = "Sex :- " + emp.sex,
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 15.sp
-                    ))
-            }
-
+        Row(
+            modifier = Modifier.padding(20.dp)){
             Image(painter = painterResource(id = emp.ImageId), contentDescription = "Profile Image",
                 contentScale = ContentScale.FillHeight,
-                modifier = Modifier.padding(8.dp)
+                modifier = Modifier
+                    .padding(8.dp)
                     .size(110.dp)
-                    .clip((CircleShape)))
+            )
         }
     }
 }
