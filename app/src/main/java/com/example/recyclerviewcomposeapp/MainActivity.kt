@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalGlideComposeApi::class)
+
 package com.example.recyclerviewcomposeapp
 
 import android.os.Bundle
@@ -37,6 +39,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
+import com.bumptech.glide.integration.compose.GlideImage
 import com.example.recyclerviewcomposeapp.model.EmployDetails
 import com.example.recyclerviewcomposeapp.ui.theme.RecyclerviewComposeAppTheme
 import com.example.recyclerviewcomposeapp.util.Details
@@ -72,6 +76,8 @@ fun DetailsContent(){
     }
 }
 
+@ExperimentalGlideComposeApi
+@OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun EmployeeCard(emp: EmployDetails) {
     ElevatedCard(
@@ -121,12 +127,13 @@ fun EmployeeCard(emp: EmployDetails) {
 
         Row(
             modifier = Modifier.padding(20.dp)){
-            Image(painter = painterResource(id = emp.ImageId), contentDescription = "Profile Image",
-                contentScale = ContentScale.FillHeight,
-                modifier = Modifier
-                    .padding(8.dp)
-                    .size(110.dp)
-            )
+                GlideImage(
+                modifier = Modifier.padding(5.dp).fillMaxSize(),
+                model = "https://i.pinimg.com/236x/2b/cb/d8/2bcbd874fc1e841364379ecbf7df681c.jpg",
+                contentDescription = "Image Url"
+            ){
+                    it.load("https://i.pinimg.com/236x/2b/cb/d8/2bcbd874fc1e841364379ecbf7df681c.jpg")
+                }
         }
     }
 }
