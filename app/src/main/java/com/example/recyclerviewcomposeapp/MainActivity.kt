@@ -134,6 +134,28 @@ fun EmployeeCard(emp: EmployDetails) {
             ){
                     it.load("https://i.pinimg.com/236x/2b/cb/d8/2bcbd874fc1e841364379ecbf7df681c.jpg")
                 }
+
+
         }
+
+        Text(text = emp.title,
+            style = TextStyle(
+                color = Color.Black,
+                fontSize = 16.sp,
+                fontWeight = FontWeight.SemiBold),
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp)
+        )
+
+        Text(text = emp.description,
+            style = TextStyle(
+                color = Color.Black,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.ExtraLight),
+
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 16.dp)
+
+        )
+
+
     }
 }
