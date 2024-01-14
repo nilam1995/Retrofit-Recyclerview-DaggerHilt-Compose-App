@@ -3,6 +3,7 @@
 package com.example.recyclerviewcomposeapp
 
 import android.os.Bundle
+import android.text.Layout.Alignment
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -150,7 +151,9 @@ fun EmployeeCard(emp: EmployDetails) {
             style = TextStyle(
                 color = Color.Black,
                 fontSize = 14.sp,
-                fontWeight = FontWeight.ExtraLight),
+                fontWeight = FontWeight.ExtraLight,
+                textAlign = TextAlign.Left
+            ),
 
             modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 16.dp)
 
