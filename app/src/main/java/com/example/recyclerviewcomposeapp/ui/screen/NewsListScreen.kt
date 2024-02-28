@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -80,7 +81,8 @@ fun NewsListItem(emp: Article, onClick: (news:Article) -> Unit) {
                         .padding(5.dp)
                         .fillMaxSize(),
                     model = emp.urlToImage,
-                    contentDescription = "Image Url"
+                    contentDescription = "Image Url",
+                    contentScale = ContentScale.FillWidth
                 ) {
                     it.load(emp.urlToImage)
                 }

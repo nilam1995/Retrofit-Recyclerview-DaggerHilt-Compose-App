@@ -22,7 +22,7 @@ import com.example.recyclerviewcomposeapp.model.Article
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun NewsDetailScreen(article: Article, onBackClick: () -> Unit){
-    Column {
+    Column{
         Text("Detail Screen", modifier = Modifier.padding(24.dp),
             style = MaterialTheme.typography.titleLarge,  color = Color.Black,
             fontSize = 16.sp,
